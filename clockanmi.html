@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> CLOCK </title>
+	<style type="text/css">
+		body{
+			background: radial-gradient(rgba(600,600,7,7),black);
+		}
+		.clock
+		{
+			display: inline-block;
+			width: 400px;
+			height: 400px;
+			/*background: radial-gradient(white,black);*/
+			background:url("clock.jpg") no-repeat center;
+			padding: 20px;
+			position: relative;
+			left: 450px;
+			top: 100px;
+			border: 50px solid black;
+			border-radius: 50%;
+		}
+		.sec, .min, .hour
+		{
+			border-radius: 10px;
+			position: relative;
+			transform-origin: bottom;
+		}
+
+		.sec{
+			z-index: 3;
+			height:200px;
+			width: 10px;
+			background:radial-gradient(black,red);
+			left: 200px;
+			animation: sec_anim 60s linear infinite;
+		}
+
+
+		.min{
+			z-index: 2;
+			height:200px;
+			width: 15px;
+			background:radial-gradient(black,blue);
+			left: 197.5px;
+			top: -200px;
+			animation: min_anim 3600s linear infinite;
+		}
+
+
+		.hour{
+			z-index: 1;
+			height: 150px;
+			width: 20px;
+			background:radial-gradient(black,green);
+			left: 195px;
+			top: -350px;
+			animation: hour_anim 86400s linear infinite;
+		}
+
+		@keyframes sec_anim{
+			form{transform:  rotateZ(0deg);}
+			to{transform: rotateZ(360deg);}
+		}
+
+			@keyframes min_anim{
+			form{transform:  rotateZ(0deg);}
+			to{transform: rotateZ(360deg);}
+		}
+		
+			@keyframes hour_anim{
+			form{transform:  rotateZ(0deg);}
+			to{transform: rotateZ(360deg);}
+		}
+		
+		
+	</style>
+</head>
+<body>
+	<div class="clock">
+
+		<div class="sec">S</div>
+		<div class="min">M</div>
+		<div class="hour">H</div>
+
+</div>
+
+</body>
+</html>
